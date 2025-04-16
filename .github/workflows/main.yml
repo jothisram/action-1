@@ -1,0 +1,14 @@
+name:
+on:
+ push:
+   branches:
+     - main
+jobs:
+  deploy:
+    run-on:ubuntu-latest
+    steps:
+      -name: check out code 
+       uses: actions/checkout@v3
+      -name: deploy application
+       uses: /deploy.sh
+       
